@@ -1,26 +1,23 @@
-# Fire-print
+# Fire-print 🔥
 
-A printing solution for Pterodactyl Panel.
+A powerful printing solution integration for Pterodactyl Panel. Fire-print extends your Pterodactyl installation with advanced printing capabilities and seamless blueprint framework integration.
 
-## Features
+![GitHub](https://img.shields.io/github/license/FIRE90YT/Fire-print)
+![GitHub release](https://img.shields.io/github/v/release/FIRE90YT/Fire-print)
 
-- Easy installation and management
-- Integration with Pterodactyl Panel
-- Automated setup process
+## ✨ Features
 
-## Installation Options
+- 🖨️ Advanced printing capabilities for Pterodactyl
+- 🔧 Easy installation with multiple options
+- 📦 Blueprint framework integration
+- 🚀 Automated dependency management
+- 🔄 Simple update and removal process
+- 💻 Node.js and Yarn support
 
-The installation script provides three options:
+## 🚀 Quick Installation
 
-1. **Install** - Full installation of Fire-print
-2. **Delete** - Remove Fire-print from your system
-3. **Install Files** - Install only the necessary files without full setup
-
-## Quick Start
+### Method 1: Automated Installer (Recommended)
 
 ```bash
-# Make the script executable
-chmod +x install.sh
-
-# Run the installation script
-./install.sh
+# Download and run the installer
+curl -sSL https://raw.githubusercontent.com/FIRE90YT/Fire-print/main/install.sh | bash
