@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Hosting - GGNodes</title>
+    <!-- Single Bootstrap import to avoid conflicts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/game.css">
+    <style> 
+           .plan-image {
+            width: 250px;
+            height: 150px;
+            border-radius: 12px;
+            margin: 0 auto 20px auto; /* ✅ Center the block */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plan-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; /* ✅ Perfect center crop */
+        }
+    </style>
+   </head>
+<body>
+    <!-- Navbar -->
+    <nav id="fixedR" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid container-custom">
+            <!-- Brand -->
+            <a class="navbar-brand text-white" href="index.html">
+                <div class="d-flex">
+                    <img class="mr-2" src="assets/images/ggnodeslogo.png" alt="GGNodes Logo" loading="lazy">
+                    <h2 class="mb-0 d-flex align-items-center">GG<span>Nodes</span></h2>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType"
+                aria-controls="navbarType" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas -->
+            <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="navbarType" aria-labelledby="navbarType">
+                <!-- Mobile Header -->
+                <div class="offcanvas-header d-flex d-lg-none">
+                    <div class="d-flex">
+                        <img class="mr-2" src="assets/images/ggnodeslogo.png" alt="GGNodes Logo" loading="lazy">
+                        <h2 class="mb-0 d-flex align-items-center">GGNodes</h2>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="offcanvas-body p-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Home</a>
+                        </li>
+
+                        <!-- FiveM -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="fivem">FiveM</a>
+                        </li>
+
+                        <!-- Hosting Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hostingDropdown" data-bs-toggle="dropdown" aria-expanded="false">Hosting</a>
+                            <ul class="dropdown-menu" aria-labelledby="hostingDropdown">
+                                <li><a class="dropdown-item" href="vps-hosting">VPS Hosting <span class="d-block">Create your own Hosting</span></a></li>
+                                <li><a class="dropdown-item" href="discord-bot">Discord Bot Hosting <span class="d-block">Host your Discord Bot</span></a></li>
+                                <li><a class="dropdown-item" href="web-hosting">Web Hosting <span class="d-block">Fast & Secure Websites</span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Important Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="importantDropdown" data-bs-toggle="dropdown" aria-expanded="false">Important</a>
+                            <ul class="dropdown-menu" aria-labelledby="importantDropdown">
+                                <li><a class="dropdown-item" href="tos">ToS <span class="d-block">Terms of Service</span></a></li>
+                                <li><a class="dropdown-item" href="pp">Privacy Policy <span class="d-block">Privacy Policy</span></a></li>
+                                <li><a class="dropdown-item" href="rp">Refund Policy <span class="d-block">Refund Policy</span></a></li>
+                                <li><a class="dropdown-item" href="announement">Announcements <span class="d-block">Latest Updates about GGNodes</span></a></li>
+                                <li><a class="dropdown-item" href="nodes">Status <span class="d-block">Status of Nodes</span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Combined Try For Free + Login Button -->
+                        <li class="nav-item">
+                            <div class="dual-button">
+                                <!-- Try For Free -->
+                                <a href="free">Try For Free</a>
+
+                                <!-- Divider Line -->
+                                <div class="divider"></div>
+
+                                <!-- Login -->
+                                <a href="https://panel.ggnodes.xyz">
+                                    <i class="fas fa-user"></i> Login
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FiveM Hosting Section -->
+    <section class="slider-section vps-section">
+        <div class="bg-image"></div>
+
+        <div class="slide active">
+            <span class="tag">FiveM Hosting</span>
+            <h1 class="title">High-Performance FiveM Hosting</h1>
+            <h2 class="brand">GGNodes</h2>
+            <p class="subtitle">Reliable, fast, and secure FiveM hosting for your communities.</p>
+            <p class="price">Starting at <span>$0.50/per gb</span></p>
+            <div class="buttons">
+                <a href="discord" class="btn">Join our Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section">
+        <div class="container container-custom">
+            <div class="site_title text-center mb-5">
+                <h2>FiveM Hosting Plans</h2>
+                <p>Choose the perfect plan for your FiveM server</p>
+            </div>
+
+            <!-- Currency Converter -->
+            <div class="currency-converter">
+                <h6 class="text-white mb-3 mt-4">Choose Currency</h6>
+                <div class="currency-options">
+                    <div class="currency-option" data-currency="INR">
+                        <img src="https://flagcdn.com/w40/in.png" class="currency-flag" alt="INR">
+                        INR
+                    </div>
+                    <div class="currency-option active" data-currency="USD">
+                        <img src="https://flagcdn.com/w40/us.png" class="currency-flag" alt="USD">
+                        USD
+                    </div>
+                    <div class="currency-option" data-currency="EUR">
+                        <img src="https://flagcdn.com/w40/eu.png" class="currency-flag" alt="EUR">
+                        EUR
+                    </div>
+                    <div class="currency-option" data-currency="PKR">
+                        <img src="https://flagcdn.com/w40/pk.png" class="currency-flag" alt="PKR">
+                        PKR
+                    </div>
+                    <div class="currency-option" data-currency="BDT">
+                        <img src="https://flagcdn.com/w40/bd.png" class="currency-flag" alt="BDT">
+                        BDT
+                    </div>
+                    <div class="currency-option" data-currency="NPR">
+                        <img src="https://flagcdn.com/w40/np.png" class="currency-flag" alt="NPR">
+                        NPR
+                    </div>
+                    <div class="currency-option" data-currency="JPY">
+                        <img src="https://flagcdn.com/w40/jp.png" class="currency-flag" alt="JPY">
+                        JPY
+                    </div>
+                </div>
+                <p class="tax-notice mt-3">* JOIN OUR DISCORD FOR EXCHANGE</p>
+            </div>       
+
+            <!-- Location Tabs -->
+            <div class="location-tabs">
+                <ul class="nav nav-pills justify-content-center" id="locationTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="usa-tab" data-bs-toggle="pill" data-bs-target="#usa" type="button" role="tab" aria-controls="usa" aria-selected="true">USA</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="germany-tab" data-bs-toggle="pill" data-bs-target="#germany" type="button" role="tab" aria-controls="germany" aria-selected="false">Germany</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="singapore-tab" data-bs-toggle="pill" data-bs-target="#singapore" type="button" role="tab" aria-controls="singapore" aria-selected="false">Singapore</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="india-tab" data-bs-toggle="pill" data-bs-target="#india" type="button" role="tab" aria-controls="india" aria-selected="false">India</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="locationTabsContent">
+   
+<!-- USA Plans -->
+<div class="tab-pane fade show active" id="usa" role="tabpanel" aria-labelledby="usa-tab">
+    <div class="location-info">
+        <div class="location-flag" style="background-image: url('https://flagpedia.net/data/flags/w1160/us.png');"></div>
+        <h3 class="location-name">USA FiveM Servers</h3>
+        <p class="location-description">High-performance hosting with low latency for players in North America. Perfect for communities across the USA and Canada.</p>
+    </div>
+    
+    <div class="row">
+        <!-- Lamball Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Lamball Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Lamball</h3>
+                    <div class="plan-price" data-original-price="4" data-location="usa">$4<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>4 GB DDR4 RAM</li>
+                    <li>10 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Cattiva Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Cattiva Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Cattiva</h3>
+                    <div class="plan-price" data-original-price="8" data-location="usa">$8<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>8 GB DDR4 RAM</li>
+                    <li>20 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Chikipi Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Chikipi Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Chikipi</h3>
+                    <div class="plan-price" data-original-price="16" data-location="usa">$16<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>16 GB DDR4 RAM</li>
+                    <li>40 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Lifmunk Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card popular">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Lifmunk Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Fuack</h3>
+                    <div class="plan-price" data-original-price="20" data-location="usa">$20<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>20 GB DDR4 RAM</li>
+                    <li>50 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Germany Plans -->
+<div class="tab-pane fade" id="germany" role="tabpanel" aria-labelledby="germany-tab">
+    <div class="location-info">
+        <div class="location-flag" style="background-image: url('https://flagpedia.net/data/flags/w1160/de.png');"></div>
+        <h3 class="location-name">Germany FiveM Servers</h3>
+        <p class="location-description">Premium hosting with excellent connectivity across Europe. Ideal for players in Germany and surrounding European countries.</p>
+    </div>
+    
+    <div class="row">
+        <!-- Lamball Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Lamball Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Lamball</h3>
+                    <div class="plan-price" data-original-price="4" data-location="germany">$4<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>4 GB DDR4 RAM</li>
+                    <li>10 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Cattiva Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Cattiva Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Cattiva</h3>
+                    <div class="plan-price" data-original-price="8" data-location="germany">$8<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>8 GB DDR4 RAM</li>
+                    <li>20 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Chikipi Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Chikipi Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Chikipi</h3>
+                    <div class="plan-price" data-original-price="16" data-location="germany">$16<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>16 GB DDR4 RAM</li>
+                    <li>40 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+            </div>
+        </div>
+        
+        <!-- Lifmunk Plan -->
+        <div class="col-lg-4 col-md-6">
+            <div class="plan-card popular">
+                <div class="plan-image">
+                    <img src="https://ggnodes.xyz/assets/images/products_img/IMG_4097.webp" alt="Lifmunk Plan">
+                </div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Fuack</h3>
+                    <div class="plan-price" data-original-price="20" data-location="germany">$20<span>/month</span></div>
+                </div>
+                <ul class="plan-features">
+                    <li>Fair Use CPU</li>
+                    <li>20 GB DDR4 RAM</li>
+                    <li>50 Gb Disk</li>
+                    <li>No Slots Limit</li>
+                    <li>in Player Slots</li>
+                    <li>NVMe SSD Storage</li>
+                    <li> DDoS Protection</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="plan-btn" onclick="window.location.href='billing'">Order Now</button>
+       
