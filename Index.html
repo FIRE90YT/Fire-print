@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Framework - Studio GGNodes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Blueprint Framework</h1>
+            <p>Automated installer for Pterodactyl Panel</p>
+        </header>
+        
+        <div class="installation-options">
+            <div class="option-card">
+                <h2>Quick Install</h2>
+                <p>One-click installation (Recommended)</p>
+                <code class="command">curl -s https://blueprint.studio.ggnodes.xyz/quick-install.sh | bash</code>
+                <button onclick="copyCommand('curl -s https://blueprint.studio.ggnodes.xyz/quick-install.sh | bash')">Copy Command</button>
+            </div>
+            
+            <div class="option-card">
+                <h2>Standard Install</h2>
+                <p>Full installation with prompts</p>
+                <code class="command">curl -s https://blueprint.studio.ggnodes.xyz/install.sh | bash</code>
+                <button onclick="copyCommand('curl -s https://blueprint.studio.ggnodes.xyz/install.sh | bash')">Copy Command</button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Prerequisites</h3>
+            <ul>
+                <li>Pterodactyl Panel installed at /var/www/pterodactyl</li>
+                <li>Ubuntu/Debian server</li>
+                <li>sudo privileges</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function copyCommand(command) {
+            navigator.clipboard.writeText(command).then(() => {
+                alert('Command copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
