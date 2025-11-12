@@ -1,0 +1,10 @@
+{
+  "name": "blueprint-installer",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p public && cp *.html public/ && cp *.css public/ && cp *.sh public/ && cp vercel.json public/"
+  },
+  "devDependencies": {
+    "@vercel/static-build": "^1.0.0"
+  }
+}
