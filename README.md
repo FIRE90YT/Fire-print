@@ -1,22 +1,26 @@
-# 🔥 FirePrint - Pterodactyl Enhancement Script
+# Fire-print
 
-FirePrint is an all-in-one script to **install, delete, or update files** related to your Pterodactyl Panel setup.
+A printing solution for Pterodactyl Panel.
 
----
+## Features
 
-## 🚀 Options
+- Easy installation and management
+- Integration with Pterodactyl Panel
+- Automated setup process
 
-| Option | Description |
-|:-------:|--------------|
-| 1 | Install FirePrint |
-| 2 | Delete FirePrint |
-| 3 | Install FirePrint Files (dependencies & setup) |
+## Installation Options
 
----
+The installation script provides three options:
 
-## 🛠️ Installation
+1. **Install** - Full installation of Fire-print
+2. **Delete** - Remove Fire-print from your system
+3. **Install Files** - Install only the necessary files without full setup
 
-Run this one-line command to start FirePrint:
+## Quick Start
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/FIRE90YT/Fire-print/main/install.sh)
+# Make the script executable
+chmod +x install.sh
+
+# Run the installation script
+./install.sh
